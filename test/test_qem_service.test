@@ -1,0 +1,4 @@
+<launch>
+  <!-- <node name="quality_module" pkg="qem" type="qem_node.py" output="screen"/> -->
+  <test test-name="test_qem" pkg="qem_service" type="test_qem_service.py"/>
+</launch>

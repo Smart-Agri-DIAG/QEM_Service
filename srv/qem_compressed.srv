@@ -1,0 +1,5 @@
+sensor_msgs/CompressedImage color_image
+sensor_msgs/Image depth_image
+BoundingBoxes bboxes
+---
+string quality

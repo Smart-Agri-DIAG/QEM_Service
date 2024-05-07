@@ -1,0 +1,23 @@
+<launch>
+    <!-- Sim Time -->
+    <param name="/use_sim_time" value="false" />
+
+    <arg name="node_start_delay" default="2.0" />  
+
+    <!--- Quality Evaluator -->
+    <node name="quality_service" pkg="qem_service" type="qem_server.py" output="screen"/>
+
+    <!--- Run rqt-->
+    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find qem_service)/launch/qem.perspective"/>
+
+    <!--- Detector and tracker -->
+    <node name="detector" pkg="qem_service" type="detector_node.py" output="screen"/>
+    <node name="tracker" pkg="qem_service" type="KF_tracker_bboxes.py" output="screen"/>
+
+    <!--- Visualizer -->
+    <node name="visualizer" pkg="qem_service" type="visualizer.py" output="screen"/>
+
+    <!-- - Mapper
+    <node name="mapper" pkg="qem_service" type="mapper.py" output="screen"/> -->
+
+</launch>
