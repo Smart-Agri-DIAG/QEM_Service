@@ -52,7 +52,7 @@ Here is possible to modify the parameters, but is necessary to compile again onc
     pip install -r requirements.txt
 ```
 
-* Copy the weights from the upper link and paste them inside the weights folder (detector.pt)
+* Copy the weights from the upper link and paste them inside the weights folder (detector.pt, berries_detector.pt, anomal.pth, d4.2_release.pt)
 
 ### <strong> Run the package: </strong>
 Ros service with detector

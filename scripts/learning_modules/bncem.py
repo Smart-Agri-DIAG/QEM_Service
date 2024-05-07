@@ -7,7 +7,7 @@ import numpy as np
 
 class BrixColorEstimationModule(LearningModule):
     def __init__(self,
-                 weights="./scripts/learning_modules/models/brixcolor/weights/d4.2_release.pt",
+                 weights="./weights/d4.2_release.pt",
                  threshold=0.5,
                  run_on_cpu=False):
         if run_on_cpu or not torch.cuda.is_available():

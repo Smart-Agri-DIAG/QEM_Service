@@ -9,12 +9,12 @@ from scripts.learning_modules.abstract import LearningModule
 CLASS_NAMES = ['Healthy', 'Anomaly']
 
 class AnomalyEstimationModule(LearningModule):
-    def __init__(self, models_path="./scripts/learning_modules/models/anomaly", only_CPU=False ,img_h=256, img_w=128):
+    def __init__(self, models_path="./weights", only_CPU=False ,img_h=256, img_w=128):
         self.img_h = 256
         self.img_w = 128
 
         self.device = torch.device('cuda:0' if torch.cuda.is_available() and not only_CPU else 'cpu')
-        self.checkpoint = torch.load(models_path + '/classification/best_model.pth', map_location=torch.device(self.device))
+        self.checkpoint = torch.load(models_path + '/anomaly.pth', map_location=torch.device(self.device))
 
         self.model =  build_model(
                             pretrained=False,

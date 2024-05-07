@@ -75,7 +75,7 @@ def main(model):
 if __name__ == '__main__':
     rospack = rospkg.RosPack()
     cwd_path = rospack.get_path('qem_service')
-    weights_path = cwd_path + "/weights/best.pt"
+    weights_path = cwd_path + "/weights/detector.pt"
     rospy.wait_for_service('qem_service')
     params = rospy.get_param("/quality_service/")
     if torch.cuda.is_available():

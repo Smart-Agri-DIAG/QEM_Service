@@ -23,7 +23,7 @@ class BerrySizeShapeEstimationModule:
 
         rospack = rospkg.RosPack()
         cwd_path = rospack.get_path('qem_service')
-        weights_path = cwd_path + "/weights/pesi_bruno.pt"
+        weights_path = cwd_path + "/weights/berries_detector.pt"
         params = rospy.get_param("/quality_service/")
         if os.path.exists(cwd_path + '/yolov5'):
             self.model = torch.hub.load(cwd_path + '/yolov5', 'custom', path=weights_path, source="local")
