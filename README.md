@@ -47,6 +47,13 @@ Here is possible to modify the parameters, but is necessary to compile again onc
     git clone https://github.com/ultralytics/yolov5
 ```
 
+* Create virtual environment and source it:
+```
+    python3 -m venv --system-site-packages qem_venv (If on Jetson)
+    python3 -m venv qem_venv
+    source qem_venv/bin/activate
+```
+
 * Install the requirements with the python dipendencies:
 ```
     pip install -r requirements.txt
